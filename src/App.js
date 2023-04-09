@@ -13,7 +13,9 @@ function App() {
     const a2 = _getItem('a2');
 
     // on each mount answer1 and answer2 are set from localstorage
+    // eslint-disable-next-line
     setAnswer1(a1);
+    // eslint-disable-next-line
     setAnswer2(a2);
   }, []);
 
