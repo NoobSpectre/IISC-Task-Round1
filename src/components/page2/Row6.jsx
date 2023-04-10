@@ -11,6 +11,11 @@ import { columnColor, textColor } from '../../theme';
 import { useState } from 'react';
 
 const seatInfo = {
+  0: {
+    // icon and msg to be rendered if crowd is 0
+    icon: '--',
+    msg: '',
+  },
   1: {
     // icon and msg to be rendered if many seats are available
     icon: (
@@ -169,7 +174,7 @@ const Row6 = ({ crowd1, crowd2, crowd3 }) => {
             Extent of crowding in the vehicle
           </Typography>
           {/* 6th row expand more or less icon */}
-          <Tooltip title={show ? 'Shrink' : 'Expand'} arrow placement='left'>
+          <Tooltip title={show ? 'Shrink' : 'Expand'} arrow placement="left">
             <IconButton size="small">
               {show ? (
                 <ExpandLess htmlColor={textColor} />

@@ -10,6 +10,11 @@ import {
 import { useState } from 'react';
 
 const serviceInfo = {
+  0: {
+    // icon and msg to be rendered if service type is 0
+    icon: '--',
+    msg: '',
+  },
   1: {
     // icon and msg to be rendered if service type is Ordinary
     icon: (
@@ -98,7 +103,7 @@ const Row7 = ({ serv1, serv2 }) => {
             Service type
           </Typography>
           {/* 7th row expand more or less icon */}
-          <Tooltip title={show ? 'Shrink' : 'Expand'} arrow placement='left'>
+          <Tooltip title={show ? 'Shrink' : 'Expand'} arrow placement="left">
             <IconButton size="small">
               {show ? (
                 <ExpandLess htmlColor={textColor} />
