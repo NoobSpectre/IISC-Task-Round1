@@ -12,13 +12,13 @@ const AnswerProvider = ({ children }) => {
   // selected option of question 2 on homepage is stored in answer2
   const [answer2, setAnswer2] = useState('');
 
-  const naviagate = useNavigate();
+  const navigate = useNavigate();
 
   // both these answers are then stored in localstorage on submission
   const handleSubmit = () => {
     _setItem('a1', answer1);
     _setItem('a2', answer2);
-    naviagate('/mode-choice');
+    navigate('/mode-choice');
   };
 
   return (
